@@ -1,4 +1,3 @@
-// This is a class
 export class Index {
   constructor() {
     // Input custom element
@@ -42,6 +41,7 @@ export class Index {
 
   handleNameEntered(event) {
     const responseContainer = document.getElementById('responseInputHere')
+    responseContainer.innerHTML = '' // clear previous content
 
     console.log(this.nameInputElement.nameInput)
     const submittedName = event.detail.nameInput
