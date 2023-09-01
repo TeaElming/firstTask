@@ -12,7 +12,6 @@ export class Index {
   }
 
   reverseName(string) {
-    console.log(string)
     // Turn name string into array
     const nameInput = string.toLowerCase()
     const nameArray = nameInput.split('')
@@ -43,9 +42,8 @@ export class Index {
     const responseContainer = document.getElementById('responseInputHere')
     responseContainer.innerHTML = '' // clear previous content
 
-    console.log(this.nameInputElement.nameInput)
     const submittedName = event.detail.nameInput
-    console.log(submittedName)
+
     const reversedName = this.reverseName(submittedName)
 
     const responseDiv = document.createElement('div')

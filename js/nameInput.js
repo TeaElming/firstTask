@@ -28,7 +28,7 @@ class NameInput extends HTMLElement {
       event.preventDefault()
       if (this.input.value !== '') {
         this.nameInput = this.input.value
-        console.log(this.nameInput)
+
         const nameEnteredEvent = new CustomEvent('nameEntered', { detail: { nameInput: this.nameInput}})
         document.dispatchEvent(nameEnteredEvent)
       }
