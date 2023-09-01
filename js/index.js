@@ -24,9 +24,20 @@ export class Index {
     for (let i = 0; i < nameLength; i++) {
       backwardsArray[i] = nameArray[nameLength - (i + 1)] // length is one more than highest index
     }
-    const reversedName = backwardsArray.join('')
+    backwardsArray[0].toUpperCase()
 
-    return reversedName
+    const reversedName = backwardsArray.join('')
+    // Set first letter to upper case
+    const reversedNameWithUppercase = reversedName.charAt(0).toUpperCase() + reversedName.slice(1)
+
+    return reversedNameWithUppercase
+  }
+
+  checkPalindrome(originalName, reversedName) {
+    if (originalName.toLowerCase() === reversedName.toLowerCase()) {
+      return true
+    }
+    return false
   }
 
   handleNameEntered(event) {
@@ -38,7 +49,12 @@ export class Index {
     const reversedName = this.reverseName(submittedName)
 
     const responseDiv = document.createElement('div')
-    responseDiv.textContent = `Your name in reverse is: ${reversedName}`
+    if (this.checkPalindrome(submittedName, reversedName)) {
+
+      responseDiv.textContent = `Your name in reverse is: ${reversedName} and it IS a palindrome.`
+    } else {
+      responseDiv.textContent = `Your name in reverse is: ${reversedName} and it IS NOT a palindrome.`
+    }
 
     responseContainer.appendChild(responseDiv)
   }

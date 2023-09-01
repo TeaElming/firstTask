@@ -4,7 +4,7 @@ template.innerHTML = `
 <form>
   <label for="input-name">Enter your name here: </label>
   <input type="text" id="input-name">
-  <button id="save-button" type="submit">Save</button>
+  <button id="submit-button" type="submit">Submit</button>
 </form>
 `
 
