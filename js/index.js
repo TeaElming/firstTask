@@ -49,7 +49,7 @@ export class Index {
     const responseDiv = document.createElement('div')
     if (this.checkPalindrome(submittedName, reversedName)) {
 
-      responseDiv.textContent = `Your name in reverse is: ${reversedName} and it IS a palindrome.`
+      responseDiv.textContent = `Your name in reverse is: ${reversedName} and it IS a palindrome, since it is the same as the name you entered: ${submittedName}.`
     } else {
       responseDiv.textContent = `Your name in reverse is: ${reversedName} and it IS NOT a palindrome.`
     }
